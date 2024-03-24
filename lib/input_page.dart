@@ -6,8 +6,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bmi_calculator/widget/reusable_cart.dart';
 
 const bottomContainerHeight = 80.0;
-const activecCardColor = Color(0xFF1D1E33);
+const activeCardColor = Color(0xFF1D1E33);
+const inactiveCardColor = Color(0xFF111328);
 const bottomContainerColor = Color(0xFFEB1555);
+
+const male = 1;
+const female = 2;
+
+enum Gender { male, female }
 
 class InputPage extends StatefulWidget {
   const InputPage({super.key});
@@ -32,7 +38,7 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    color: activecCardColor,
+                    color: activeCardColor,
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.mars,
                       content: 'Male',
@@ -41,9 +47,9 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: ReusableCard(
-                      color: activecCardColor,
+                      color: activeCardColor,
                       cardChild: IconContent(
-                        icon: FontAwesomeIcons.children,
+                        icon: FontAwesomeIcons.venus,
                         content: 'Female',
                       )),
                 ),
@@ -54,7 +60,7 @@ class _InputPageState extends State<InputPage> {
           //
           Expanded(
             child: ReusableCard(
-              color: activecCardColor,
+              color: activeCardColor,
               cardChild: Column(
                 children: <Widget>[
                   Icon(FontAwesomeIcons.personArrowDownToLine)
@@ -70,7 +76,7 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    color: activecCardColor,
+                    color: activeCardColor,
                     cardChild: Column(
                       children: <Widget>[
                         Icon(FontAwesomeIcons.personArrowDownToLine)
@@ -80,7 +86,7 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: ReusableCard(
-                    color: activecCardColor,
+                    color: activeCardColor,
                     cardChild: Column(
                       children: <Widget>[
                         Icon(FontAwesomeIcons.personArrowDownToLine)
