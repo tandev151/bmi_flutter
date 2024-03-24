@@ -36,81 +36,77 @@ class _InputPageState extends State<InputPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      setState(() {
+                  child: ReusableCard(
+                    onPress: () {
+                      this.setState(() {
                         selectedGender = Gender.male;
                       });
                     },
-                    child: ReusableCard(
-                      color: selectedGender == Gender.male
-                          ? activeCardColor
-                          : inactiveCardColor,
-                      cardChild: IconContent(
-                        icon: FontAwesomeIcons.mars,
-                        content: 'Male',
-                      ),
+                    color: selectedGender == Gender.male
+                        ? activeCardColor
+                        : inactiveCardColor,
+                    cardChild: IconContent(
+                      icon: FontAwesomeIcons.mars,
+                      content: 'Male',
                     ),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        selectedGender = Gender.female;
-                      });
-                    },
-                    child: ReusableCard(
-                        color: selectedGender == Gender.female
-                            ? activeCardColor
-                            : inactiveCardColor,
-                        cardChild: IconContent(
-                          icon: FontAwesomeIcons.venus,
-                          content: 'Female',
-                        )),
-                  ),
+                  child: ReusableCard(
+                      onPress: () {
+                        this.setState(() {
+                          selectedGender = Gender.female;
+                        });
+                      },
+                      color: selectedGender == Gender.female
+                          ? activeCardColor
+                          : inactiveCardColor,
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.venus,
+                        content: 'Female',
+                      )),
                 ),
               ],
             ),
           ),
 
           //
-          Expanded(
-            child: ReusableCard(
-              color: activeCardColor,
-              cardChild: Column(
-                children: <Widget>[
-                  Icon(FontAwesomeIcons.personArrowDownToLine)
-                ],
-              ),
-            ),
-          ),
+          // Expanded(
+          //   child: ReusableCard(
+          //     color: activeCardColor,
+          //     cardChild: Column(
+          //       children: <Widget>[
+          //         Icon(FontAwesomeIcons.personArrowDownToLine)
+          //       ],
+          //     ),
+          //   ),
+          // ),
 
           Expanded(
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Expanded(
-                  child: ReusableCard(
-                    color: activeCardColor,
-                    cardChild: Column(
-                      children: <Widget>[
-                        Icon(FontAwesomeIcons.personArrowDownToLine)
-                      ],
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: ReusableCard(
-                    color: activeCardColor,
-                    cardChild: Column(
-                      children: <Widget>[
-                        Icon(FontAwesomeIcons.personArrowDownToLine)
-                      ],
-                    ),
-                  ),
-                ),
+                // Expanded(
+                //   child: ReusableCard(
+                //     color: activeCardColor,
+                //     cardChild: Column(
+                //       children: <Widget>[
+                //         Icon(FontAwesomeIcons.personArrowDownToLine)
+                //       ],
+                //     ),
+                //   ),
+                // ),
+                // Expanded(
+                //   child: ReusableCard(
+                //     color: activeCardColor,
+                //     cardChild: Column(
+                //       children: <Widget>[
+                //         Icon(FontAwesomeIcons.personArrowDownToLine)
+                //       ],
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),
