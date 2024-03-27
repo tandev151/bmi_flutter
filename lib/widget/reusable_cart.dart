@@ -21,7 +21,7 @@ class ReusableCard extends StatelessWidget {
           color: color,
         ),
         height: 200.0,
-        width: double.infinity,
+        // width: double.infinity,
       ),
     );
   }
